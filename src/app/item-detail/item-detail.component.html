@@ -1,0 +1,15 @@
+<div class='container'>
+  <div class='row'>
+    <div class='col-1'>
+      {{index}}
+    </div>
+    <div class='col-11'>
+      <div class='row'>{{item.title}} <span *ngIf='item.url'> ({{item.url.split('/')[2]}})</span> </div>
+      <div class='row'>
+        {{item.score}} point by {{item.by}} {{item.time*1000 | timeAgo}}
+      </div>
+        
+    </div>
+  </div>
+</div>
+
