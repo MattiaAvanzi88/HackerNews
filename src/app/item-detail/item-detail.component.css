@@ -1,0 +1,28 @@
+.card {    
+    margin-bottom: 15px;
+    border-color: #e25a00;
+}
+
+.card-header {    
+    background-color: rgb(246, 246, 239);
+    color: #e25a00;
+    font-weight: 700;
+    border-color: #e25a00;
+}
+
+.card-text {
+    color:#222222;
+    font-size: 14px;
+}
+
+.close, a {
+    color:  #e25a00;
+    opacity: 1;
+}
+
+.myBtn {
+    color: #e25a00;
+    font-weight: 700;
+    background-color: rgb(246, 246, 239);
+    
+}

@@ -1,0 +1,33 @@
+<div class="commentContainer" *ngIf="comment && !comment.deleted">
+    <div class='commentBox'>
+        <div class='row author'>            
+            <b>{{comment.by}}</b>&nbsp;{{ comment.time*1000 | timeAgo }}
+            <button *ngIf='checkAuthor' (click)='onEditMode=!onEditMode;' class='btn'>
+                <span *ngIf='!onEditMode'>Edit</span>
+                <span *ngIf='onEditMode'>Save</span>
+            </button>
+            <button *ngIf='checkAuthor && !onEditMode' (click)='comment.deleted=true;' class='btn'>Delete</button>            
+        </div>           
+        <div *ngIf='!onEditMode' class='row' [innerHTML]="comment.text"></div>        
+        <div class='row' *ngIf='onEditMode'>
+            <textarea [(ngModel)]='comment.text'></textarea>
+        </div>
+        <div class='row' *ngIf='!onEditMode'>
+            <button class='btn replyButton' *ngIf='!openForm' (click)='openForm=true;'>Reply</button>
+        </div>        
+    </div>  
+    <div class='replyTextArea' *ngIf='openForm'>
+        <textarea [(ngModel)]="newComment"></textarea>
+        <div class='row replyTextArea'>
+            <button class='btn' (click)="addSubComment();openForm=false;">Add comment</button>
+            <button class='btn closeBtn' (click)="newComment='';openForm=false;">Close</button>
+        </div>
+    </div> 
+    <div class='subCommentsBox' *ngIf="(comment.kids && comment.kids.length)">            
+        <div  *ngFor='let com of subComments' >
+            <app-comment [comment]='com'></app-comment>
+        </div>
+    </div>
+</div>
+
+

@@ -1,15 +1,21 @@
-<div class='container'>
-  <div class='row'>
-    <div class='col-1'>
-      {{index}}
-    </div>
-    <div class='col-11'>
-      <div class='row'>{{item.title}} <span *ngIf='item.url'> ({{item.url.split('/')[2]}})</span> </div>
-      <div class='row'>
-        {{item.score}} point by {{item.by}} {{item.time*1000 | timeAgo}}
-      </div>
-        
-    </div>
+<div *ngIf='item && !item.deleted' class='card'>
+  <div class='card-header'>
+    <span>
+      {{index}}. {{item.title}}&nbsp;<a href='{{item.url}}' *ngIf='item.url'>({{item.url.split('/')[2]}})</a>
+    </span>       
+    <button type='button' class='close' aria-label='Close' (click)='item.deleted = true;'>
+      <span aria-hidden='true'>&times;</span>
+    </button>
   </div>
+  <div class='card-body'>    
+    <p class='card-text'>        
+        {{item.score}} point by <b>{{item.by}}</b> {{item.time*1000 | timeAgo}} -&nbsp;
+        <button type='button' class='btn btn-sm myBtn' routerLink='/item/{{item.id}}'>
+            <span *ngIf='!item.descendants'>Discuss</span>
+            <span *ngIf='item.descendants'>
+              {{item.descendants}} comment<span *ngIf="item.descendants>1">s</span>
+            </span>
+        </button>
+    </p>
+  </div>      
 </div>
-

@@ -1,0 +1,6 @@
+<div class='listContainer'>
+    <div class='itemList' *ngFor="let id of ids; let i = index;">  
+        <app-item-detail *ngIf='i<30' [index]="i+1" [id]="id"></app-item-detail>
+    </div>
+</div>
+

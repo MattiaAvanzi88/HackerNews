@@ -14,14 +14,12 @@ export class ItemDetailComponent implements OnInit {
 
   constructor(private itemService: ItemService) { }
 
-  ngOnInit() {
-    this.getItem();
+  ngOnInit() {   
+    this.getItem();        
   }
 
   getItem() {
     this.itemService.getItem(this.id)
     .subscribe(item => this.item = item);
-
   }
-
 }

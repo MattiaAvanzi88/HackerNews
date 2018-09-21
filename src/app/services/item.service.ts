@@ -40,6 +40,10 @@ export class Item {
   title: string;
   parts: number[];
   descendants: number;
+
+  constructor() {
+    this.time= new Date().getTime()/1000;
+  }
 }
 
 @Injectable({
@@ -52,8 +56,8 @@ export class ItemService {
 
   constructor( private http: HttpClient) { }
 
-  getNewsId (): Observable<Number[]> {
-    return this.http.get<Number[]>(this.hackerApiURL+'newstories.json');
+  getListId(type : string): Observable<Number[]> {
+    return this.http.get<Number[]>(this.hackerApiURL+type+'stories.json');
       // .pipe(
       //   tap(heroes => this.log('fetched heroes')),
       //   catchError(this.handleError('getHeroes', []))

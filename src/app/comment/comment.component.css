@@ -1,0 +1,50 @@
+.subCommentsBox {
+    margin-left: 5%;
+}
+
+.commentBox {
+    border: solid;
+    border-width: 1px;
+    border-radius: 20px;
+    margin-top: 20px;
+    padding-left: 45px;
+    padding-right: 45px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    max-width: 100%;
+    background-color: rgba(216,105,31,0.1)
+}
+
+.author {
+    margin-bottom: 15px;
+    color: #757575;
+}
+
+textarea {
+    width: 100%;
+    border-radius: 20px;
+    resize: none;
+    padding: 22px;
+}
+
+button {
+    position: relative;
+    top: -5px;
+    left: 20px;
+    margin-right: 5px;
+    color: #e25a00;
+    font-weight: 700;
+    background-color: #cecece;
+}
+
+.replyTextArea {
+    margin-top: 20px;
+}
+
+.replyButton {
+    margin-top: 10px;
+    position: initial;
+}    

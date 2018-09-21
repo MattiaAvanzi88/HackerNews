@@ -1,0 +1,52 @@
+.container {
+    background-color: rgb(246, 246, 239);
+    padding: 50px;   
+    border: solid;
+    border-width: 2px;
+    border-color: #e25a00;
+}
+
+.titleItem {
+    font-size: 22px;
+    font-weight: 700;
+    color: #e25a00;
+}
+
+.subtitleItem {
+    color: grey;
+}
+
+.textItem {
+    margin-top: 20px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.replyBox {
+    color: #757575;
+    font-style: italic;
+    font-weight: 700;
+    margin-top: 20px;
+    margin-left: 5px;
+}
+
+textarea {
+    width: 100%;
+    margin: 20px;
+    border-radius: 20px;
+    resize: none;
+    padding: 22px;
+}
+
+button {
+    position: relative;
+    top: -5px;
+    left: 20px;
+    color: #e25a00;
+    font-weight: 700;
+    background-color: #cecece;
+}
+
+.closeBtn {
+    margin-left: 10px;
+}
