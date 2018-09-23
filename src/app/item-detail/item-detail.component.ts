@@ -1,6 +1,12 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Item, ItemService } from '.././services/item.service';
 
+/* 
+  It is the component used by the ItemListComponent
+  to render every single Item.
+  It download the data of the 
+  item with the id passed as input
+*/
 @Component({
   selector: 'app-item-detail',
   templateUrl: './item-detail.component.html',

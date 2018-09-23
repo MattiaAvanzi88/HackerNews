@@ -46,8 +46,14 @@ button {
     color: #e25a00;
     font-weight: 700;
     background-color: #cecece;
+    margin-right: 5px;
 }
 
 .closeBtn {
     margin-left: 10px;
+}
+
+a {
+    color:  #e25a00;
+    opacity: 1;
 }

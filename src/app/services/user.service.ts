@@ -1,5 +1,16 @@
 import { Injectable } from '@angular/core';
 
+
+/* 
+  User service is the service of the application for
+  handling the user login session.
+  It is actually a mock because I don't have access
+  to the login API
+*/
+
+
+
+
 // id	The user's unique username. Case-sensitive. Required.
 // delay	Delay in minutes between a comment's creation and its visibility to other users.
 // created	Creation date of the user, in Unix Time.

@@ -3,6 +3,22 @@ import { ActivatedRoute } from '@angular/router';
 import { Item, ItemService } from '.././services/item.service';
 import { UserService } from '.././services/user.service';
 
+/* 
+  DiscussItemComponent it's the component
+  rendered when a user want to see or comment
+  a specific Item.
+  It download the item datas with the id
+  recovered by the url and if they are present
+  it also download the first level comments.
+  For every comment downloaded in this way
+  a comment component is rendered.
+  It also provide functions to comment the item by 
+  the user. 
+  Not to dirty the real elements of hackerNews website
+  this last feature has not really been implemented 
+  because the comments are saved only locally 
+  and not sent to the server through a POST request.  
+*/
 @Component({
   selector: 'app-discuss-item',
   templateUrl: './discuss-item.component.html',

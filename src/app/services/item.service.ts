@@ -5,6 +5,15 @@ import { Observable, of } from 'rxjs';
 import { catchError, map, tap } from 'rxjs/operators'; 
 
  
+/* 
+  Item service is the main service of the application.
+  - it defines the new class type Item
+  - it defines  the procedure 
+    to download the item's ids of a specific type 
+  - it defines the procedure to download a single item.
+*/
+
+
 const httpOptions = {
   headers: new HttpHeaders({ 'Content-Type': 'application/json' })
 };
@@ -57,20 +66,12 @@ export class ItemService {
   constructor( private http: HttpClient) { }
 
   getListId(type : string): Observable<Number[]> {
-    return this.http.get<Number[]>(this.hackerApiURL+type+'stories.json');
-      // .pipe(
-      //   tap(heroes => this.log('fetched heroes')),
-      //   catchError(this.handleError('getHeroes', []))
-      // );
+    return this.http.get<Number[]>(this.hackerApiURL+type+'stories.json');  
   }
 
   getItem(id: number): Observable<Item> {
     const url = this.hackerApiURL+'item/'+id+'.json';
-    return this.http.get<Item>(url)
-    // .pipe(
-    //   tap(_ => this.log(`fetched hero id=${id}`)),
-    //   catchError(this.handleError<Hero>(`getHero id=${id}`))
-    // );
+    return this.http.get<Item>(url)   
   }
     
 

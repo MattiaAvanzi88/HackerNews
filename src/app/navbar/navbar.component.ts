@@ -1,6 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
+/* 
+  The NavBar is the naigation header of the application.
+  It use the routerLink property to navigate between
+  the different list of items.
+*/
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',

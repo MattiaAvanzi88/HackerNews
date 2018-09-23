@@ -2,6 +2,15 @@ import { Component, OnInit, Input } from '@angular/core';
 import { Item, ItemService } from '.././services/item.service';
 import { UserService } from '.././services/user.service';
 
+
+/* 
+ 
+it is the component that deals with displaying a single comment.
+if there are sub-components this element is reused recursively 
+until all the comments of the original item have been downloaded.
+In the same mock way of the DiscussItemComponent provide functions 
+to subcomment by the user.
+*/
 @Component({
   selector: 'app-comment',
   templateUrl: './comment.component.html',

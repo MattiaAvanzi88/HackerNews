@@ -4,7 +4,12 @@ import { ItemsListComponent } from '.././items-list/items-list.component';
 import { ItemDetailComponent } from '.././item-detail/item-detail.component';
 import { DiscussItemComponent } from '../discuss-item/discuss-item.component';
 
-
+/* 
+  The Routing module defines the routes of the application.
+  For this mock only two routes are implemented:
+  - The Item List page
+  - The Item Detail Page
+*/
 
 const routes: Routes = [
   { path: '', redirectTo: 'list/new', pathMatch: 'full' },
