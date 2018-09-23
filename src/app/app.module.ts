@@ -14,6 +14,7 @@ import { ItemDetailComponent } from './item-detail/item-detail.component';
 import { TimeAgoPipe } from 'time-ago-pipe';
 import { DiscussItemComponent } from './discuss-item/discuss-item.component';
 import { CommentComponent } from './comment/comment.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { CommentComponent } from './comment/comment.component';
     ItemDetailComponent,
     TimeAgoPipe,
     DiscussItemComponent,
-    CommentComponent
+    CommentComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,

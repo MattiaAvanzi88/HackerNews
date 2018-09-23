@@ -10,6 +10,12 @@
   <div class='card-body'>    
     <p class='card-text'>        
         {{item.score}} point by <b>{{item.by}}</b> {{item.time*1000 | timeAgo}} -&nbsp;
+        <button type='button' *ngIf="!justVote" class='btn btn-sm myBtn' (click)='item.score = item.score + 1; justVote = true'>
+          Vote          
+        </button>
+        <button type='button' *ngIf="justVote" class='btn btn-sm myBtn' (click)='item.score = item.score - 1; justVote = false'>
+            Unvote          
+        </button>
         <button type='button' class='btn btn-sm myBtn' routerLink='/item/{{item.id}}'>
             <span *ngIf='!item.descendants'>Discuss</span>
             <span *ngIf='item.descendants'>
